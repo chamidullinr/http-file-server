@@ -7,7 +7,12 @@ The server also includes Prometheus metrics exporter from library [prometheus-fa
 
 ## Get Started
 
-First, build the docker image.
+Pull image from the Docker Hub.
+```bash
+docker pull chamidullinr/http-file-server:latest
+```
+
+Or build the docker image.
 ```bash
 docker build --tag http-file-server .
 ```
@@ -20,3 +25,5 @@ docker run \
   --name http-file-server \
   http-file-server
 ```
+
+Access files in directory `[DIRECTORY_TO_MOUNT]` from URL `http://localhost:8080/files/{file_path}`. 
